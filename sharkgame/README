@@ -1,0 +1,43 @@
+Assignment 2
+Joshua Campbell
+
+To compile the program, do make.
+To run the program do make run.
+To clean the program, do make clean.
+
+The program takes in an image and displays it, fills the background with a
+color, uses the SDL_rect class to fill part of the screen with color. It
+utilizes the game loop and game engine class with the additional game
+object helper class to run the game. Input is allowed and 2 different control
+metaphors are implemented to show off 2 different types of control.
+
+To change the control metaphor:
+Press the 1 key to activate the Velocity Control Metaphor
+Press the 2 key to activate the Position Control Metaphor
+
+Once a control metaphor is selected:
+Up to move the character up
+Down to move the character down
+Left to move the character left
+Right to move the character right
+
+When in Velocity Control Metaphor mode, the shark has a tail flopping sprite
+animation. When in Position Control Metaphor, the shark will have an eating
+sprite animation.
+
+The Tile Manager takes the water tile to be used for the background and then
+is applied.
+
+The fish represent the collectible.
+
+NEW WITH ASSN4:
+
+Bubbles were added for the particles section. Both particle and particleEmitter
+classes were added. The bubbles spawn at the ocean floor and rise up animating
+back and forth until they go away randomly and respawn at the bottom.
+
+A collision detection class was added that used the box collider method from
+the lecture. It takes in 2 rects and compares the sides for overlap. 
+
+There is a collision response when the shark collides with the seafloor. The
+shark will stop moving down and cannot move into the floor.
