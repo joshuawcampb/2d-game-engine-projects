@@ -1,0 +1,76 @@
+Assignment 5
+Joshua Campbell
+
+*All art is by me*
+*ASSN5 list requirements at the end (Start/end screens, pause menu, TTF)*
+
+To compile the program, do make.
+To run the program do make run.
+To clean the program, do make clean.
+
+The program takes in an image and displays it, fills the background with a
+color, uses the SDL_rect class to fill part of the screen with color. It
+utilizes the game loop and game engine class with the additional game
+object helper class to run the game. Input is allowed and 2 different control
+metaphors are implemented to show off 2 different types of control.
+
+To change the control metaphor:
+Press the 1 key to activate the Velocity Control Metaphor
+Press the 2 key to activate the Position Control Metaphor
+
+In control mode 1:
+Left to walk left
+Right to walk right
+Up to do a hop
+
+In control mode 2:
+Up to move the character up
+Down to move the character down
+Left to move the character left
+Right to move the character right
+
+When in Velocity Control Metaphor mode, Luuk has a walking sprite
+animation. When in Position Control Metaphor, Luuk will have an flying
+sprite animation.
+
+The Tile Manager takes the tilesheet to be used for the background and then
+is applied.
+
+The bone represents the collectible.
+The saws result in death when touched.
+
+There are rain particles. Particle and particleEmitter classes are used. 
+The rain spawns under the clouds and falls diagonally 
+until they go away randomly and respawn at the top.
+
+A collision detection class was used that used the box collider method from
+the lecture. It takes in 2 rects and compares the sides for overlap. It is
+used to detect when the player is touching a saw and when the player is
+touching the bone.
+
+There is a collision response when Luuk collides with the floor. Luuk will stop 
+moving down upon collision.
+
+Luuk also cannot go off of the screen.
+
+New components to satisfy Assn5:
+
+1) Start/Finish screens were added.
+	-Upon starting the game the player will be greeted with a title screen in
+	which they can press space to play. 
+	-There is also a game over screen upon touching the saws, allowing the player
+	to continue with space or quit with esc.
+	-When contact with made with the bone, a winning screen will pop up allowing
+	the player to quit with esc.
+	
+2) In-Play UI: Pause Menu
+	-A pause menu was added to the game. Upon pressing esc while playing the game,
+	the pause menu will pop up. The player will be allowed to continue with
+	space or quit with esc. The game can be paused in either control mode.
+	
+3) Add textual items with fonts.
+	-TTF was used to satisfy the requirement. On the top left of the screen,
+	the player will see a death counter. This death counter keeps track of
+	their deaths upon death. If the player chooses to continue after game over,
+	they will see that the death total has risen by 1.
+	
